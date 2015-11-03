@@ -1,28 +1,14 @@
-== README
+rails new trail
+gem 'paper_trail', '~> 4.0.0'
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+root to: 'articles#index'
+resources :articles
 
-Things you may want to cover:
+rails g paper_trail:install
+(creates versions table)
 
-* Ruby version
+rails g scaffold article title:string
 
-* System dependencies
+add history action and the view
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+For more : http://geekhmer.github.io/blog/2015/03/03/versioning-with-papertrail-on-rails/
